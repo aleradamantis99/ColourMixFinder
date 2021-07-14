@@ -6,6 +6,7 @@ from fractions import Fraction
 from statistics import mean
 from math import sqrt
 import csv
+"""
 colour_dict = {}
 with open('CitColours.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
@@ -16,7 +17,7 @@ with open('CitColours.csv') as csv_file:
         colour_dict[row[0]] = row[2]
             
 print(colour_dict)
-
+"""
 def get_rgb_from_hex(h):
     return tuple(int(h[i:i+2], 16) for i in (0, 2, 4))
 def mix_two_cmyk_colours(c1, c2, prop1 = 1, prop2 = 1):
