@@ -63,14 +63,15 @@ def hex_to_cmyk_color(h):
     c = sRGBColor(*c)
     c = convert_color(c, CMYKColor)
     return c
+
 # my_colors = ['#ffffff', '#9b0e05', '#c00b0c', '#e21516', '#4b205c', '#18ABCC', '#789ebb', '#35998e', '#094345', '#008660', '#36a062', '#003b1d', '#257326', '#57aa2d', '#a89758', '#c6c180', '#8c5144', '#cb7953', '#dbad75', '#4e3433', '#7b7e74', '#9caeae', '#d2e4df', '#aba495', '#d6d5c4', '#010100', '#535659', '#3B5150', '#84C3AA']
 my_colors = ['#ffffff', 'Abaddon Black', 'Bugmans Glow', 'Caliban Green', 'Celestra Grey', 'Incubi Darkness', 'Mephiston Red', 'Rakarth Flesh', 'Rhinox Hide', 'Thousand Sons Blue', 'Zandri Dust', 'Dark Reaper', 'Cadian Fleshtone', 'Dawnstone', 'Eshin Grey', 'Evil Sunz Scarlet', 'Kabalite Green', 'Kislev Flesh', 'Moot Green', 'Pallid Wych Flesh', 'Ulthuan Grey', 'Warpstone Glow', 'Wild Rider Red', 'Dawnstone', 'Xereus Purple', 'Gauss Blaster Green']
 
 max_divisions = 6
 max_colors = 3
+target_color = '#f7d095'
 
-target_color = hex_to_cmyk_color('#f7d095')
-#target_color = hex_to_cmyk_color(colour_dict['Xereus Purple'])
+target_color = hex_to_cmyk_color(get_hex_from_name(target_color))
 
 target_color = convert_color(target_color, LabColor)
 current_best_diff = 1000000
